@@ -63,7 +63,7 @@ h1{
 }
 
 .tabs-area{
-  border-bottom: 1px solid lightgray;
+  /* border-bottom: 1px solid lightgray; */
   display: flex;
   position: relative;
 }
@@ -209,7 +209,7 @@ h1{
 /* 화면 너비가 480px 이하일 때 (모바일) */
 @media screen and (max-width: 480px) {
   .container{
-    font-size: 13px;
+    font-size: 0.8em;
   }
 }
 
