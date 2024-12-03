@@ -1,0 +1,215 @@
+body {
+  margin: 0px;
+  background-image: url(images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Maven Pro", serif;
+}
+
+.container{
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2em;
+  min-height: 100vh;
+  max-width: 800px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+h1{
+  margin-bottom: 2vh;
+  text-align: center;
+  text-shadow: 0px 0px 5px rgb(149, 149, 212);
+}
+
+.input-area{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.3em;
+  font-family: "Noto Sans KR", serif;
+}
+
+.input-area #input-text{
+  flex: 1;
+  max-width: 740px;
+  padding: 0.3em;
+  margin-right: 0.5em;
+  border-radius: 7px;
+  border-color: rgba(0, 0, 0, 0.267);
+}
+
+#plus-button{
+  padding: 0 0.6em;
+  border-style: none;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+}
+
+#plus-button:hover{
+  background-color: rgb(29, 29, 223);
+  color: white;
+}
+
+#plus-button:active{
+  background-color: rgb(42, 42, 156);
+  color: rgb(151, 151, 151);
+  transform: scale(0.9);
+}
+
+.task-tabs-area{
+  border: 2px solid rgba(0, 0, 0, 0.267);
+  border-radius: 7px;
+  font-family: "Noto Sans KR", serif;
+}
+
+.tabs-area{
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  position: relative;
+}
+
+.tabs-area div {
+  padding: 1em 2em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#under-line {
+  height: 4px;
+  /* 처음에 안보이게끔 width 0 */
+  width: 0;
+  background-color: rgba(51, 50, 50, 0.904);
+  position: absolute;
+  padding: 0px;
+  /* top은 원래 52px */
+  bottom: 0px;
+  left: 0px;
+  transition: 0.3s;
+}
+
+#single-area-true,
+#single-area{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8em;
+}
+
+
+#single-area-true{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#single-area .task-content{
+  flex: 1;
+}
+
+#single-area-true .task-check{
+  text-decoration: line-through;
+  text-decoration-color: red;
+  text-decoration-thickness: 3px;
+  flex: 1;
+  background-color: rgb(228, 225, 225);
+  padding: 0.6em 0;
+  border-radius: 7px;
+  }
+
+.task-check,
+.task-content{
+  font-weight: bold;
+}
+
+
+#check-button{
+  padding: 0.6em 0.9em;
+  border-style: none;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+}
+
+#check-button:hover{
+  background-color: rgb(18, 148, 18);
+  color: white;
+}
+
+#check-button:active{
+  background-color:darkgreen;
+  color: white;
+}
+
+#delete-button{
+  padding: 0.6em 0.9em;
+  border-style: none;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+}
+
+#delete-button:hover{
+  background-color: rgb(182, 36, 36);
+  color: white;
+}
+
+#delete-button:active{
+  background-color: rgb(99, 45, 45);
+  color: rgb(151, 151, 151);
+}
+
+.delete-all-area{
+  /* border: 1px solid black; */
+  text-align: center;
+}
+
+#delete-all{
+  background-color: blueviolet;
+  color: rgb(243, 234, 234);
+  border-style: none;
+  padding: 0.9em;
+  border-radius: 5px;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  font-weight: bold;
+  font-family: "Noto Sans KR", serif;
+}
+
+#delete-all:hover{
+  background-color: rgb(117, 43, 185);
+  color: white;
+}
+
+#delete-all:active{
+  background-color: rgb(48, 14, 80);
+}
+
+/* 반응형 웹 적용 */
+/* 화면 너비가 768px 이하일 때 (태블릿) */
+@media screen and (max-width: 892px) {
+  .container {
+    padding: 1em;
+    max-width: 90%;
+  }
+
+  .input-area {
+    gap: 1em;
+  }
+
+  .input-area #input-text {
+    max-width: 100%;
+    
+  }
+
+  #plus-button {
+    padding: 0.5em;
+  }
+}
+
+/* 화면 너비가 480px 이하일 때 (모바일) */
+@media screen and (max-width: 480px) {
+  .container{
+    font-size: 13px;
+  }
+}
+
